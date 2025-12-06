@@ -4,7 +4,7 @@
   "description": "Simple Node.js project for Jenkins CI",
   "main": "index.js",
   "scripts": {
-    "build": "echo Building project... && mkdir -p build && copy index.js build\\",
+    "build": "echo Building project... && mkdir -p build && cp index.js build/"
     "start": "node index.js",
     "test": "echo \"No tests configured\""
   },
