@@ -10,18 +10,20 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {
+         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                nodejs(nodeJSInstallationName: 'NodeJS 18') {
+                    sh 'npm install'
+                }
             }
         }
-
         stage('Build') {
             steps {
-                sh 'npm run build'
+                nodejs(nodeJSInstallationName: 'NodeJS 18') {
+                    sh 'npm run build'
+                }
             }
         }
-
         stage('Archive Artifact') {
             steps {
                 archiveArtifacts artifacts: 'build/**', fingerprint: true
