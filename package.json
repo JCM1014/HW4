@@ -1,0 +1,13 @@
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "description": "Simple Node.js project for Jenkins CI",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo Building project... && mkdir -p build && copy index.js build\\",
+    "start": "node index.js",
+    "test": "echo \"No tests configured\""
+  },
+  "author": "",
+  "license": "MIT"
+}
